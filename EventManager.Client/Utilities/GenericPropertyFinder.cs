@@ -13,8 +13,10 @@
         {
             //Getting Type of Generic Class Model
             Type tModelType = tmodelObj.GetType();
+            //Getting properties of the type
             PropertyInfo[] properties = tModelType.GetProperties();
-            var valuesOfProperties = properties.Select(p => p.GetValue(tmodelObj).ToString()).ToArray();
+            //Getting the 
+            string[] valuesOfProperties = properties.Select(p => p.GetValue(tmodelObj).ToString()).ToArray();
 
             return valuesOfProperties;
         }

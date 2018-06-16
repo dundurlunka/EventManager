@@ -32,6 +32,7 @@
                 Event eventToBeDeleted = this.GetEvent(name);
                 context.Events.Attach(eventToBeDeleted);
                 context.Events.Remove(eventToBeDeleted);
+
                 context.SaveChanges();
             }
         }
@@ -43,6 +44,7 @@
                 Event eventToBeDeleted = this.GetEvent(id);
                 context.Events.Attach(eventToBeDeleted);
                 context.Events.Remove(eventToBeDeleted);
+
                 context.SaveChanges();
             }
         }
@@ -57,7 +59,8 @@
                 eventToBeEdited.Name = name;
                 eventToBeEdited.Location = location;
                 eventToBeEdited.StartDate = startDate;
-                eventToBeEdited.EndDate = endDate;                
+                eventToBeEdited.EndDate = endDate;
+                
                 context.SaveChanges();
             }
         }

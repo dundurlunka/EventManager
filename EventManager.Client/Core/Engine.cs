@@ -20,6 +20,7 @@
             context.Database.Initialize(true);
 
             Console.WriteLine(@"You just started Daniel Georgiev's Event Manager. View the syntax of the commands by typing ""Help"" (without the quotation marks)");
+
             while (true)
             {
                 try
@@ -31,17 +32,17 @@
                 }
                 catch (DbEntityValidationException validationException)
                 {
-                    foreach (var eve in validationException.EntityValidationErrors)
+                    foreach (var vaidationResults in validationException.EntityValidationErrors)
                     {
-                        foreach (var ve in eve.ValidationErrors)
+                        foreach (var validationError in vaidationResults.ValidationErrors)
                         {
-                            Console.WriteLine("Error: {0}", ve.ErrorMessage);
+                            Console.WriteLine("Error: {0}", validationError.ErrorMessage);
                         }
                     }
                 }
-                catch (Exception e)
+                catch (Exception exception)
                 {
-                    Console.WriteLine(e.Message);
+                    Console.WriteLine(exception.Message);
                 }
             }
         }

@@ -23,6 +23,7 @@
                 string[] entityValues = GenericPropertyFinder<T>.GetPropertiesValues(entity);
                 sb.AppendLine(PrintRow(entityValues));
             }
+
             sb.AppendLine(PrintLine());
 
             return sb.ToString().Trim();

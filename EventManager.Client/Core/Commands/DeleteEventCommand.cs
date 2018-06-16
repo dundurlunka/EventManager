@@ -23,21 +23,27 @@
             if (eventId == 0) //the argument is a name
             {
                 isExistent = eventService.IsEventExistent(argumentByWhichToDelete);
+
                 if (isExistent)
                 {
                     this.eventService.DeleteEvent(argumentByWhichToDelete);
+
                     return $"Event {argumentByWhichToDelete} was deleted.";
                 }
+
                 return $"Event {argumentByWhichToDelete} does not exist.";
             }
             else
             {
                 isExistent = eventService.IsEventExistent(eventId);
+
                 if (isExistent)
                 {
                     this.eventService.DeleteEvent(eventId);
+
                     return $"Event {eventId} was deleted.";
                 }
+
                 return $"Event {eventId} does not exist.";
             }
                 

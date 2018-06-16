@@ -17,6 +17,7 @@
         {
             Console.WriteLine("Good Bye!");
             Environment.Exit(0);
+
             return "Bye-bye!";
         }
     }

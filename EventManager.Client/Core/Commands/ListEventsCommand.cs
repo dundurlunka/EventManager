@@ -26,6 +26,7 @@
             {
                 return "There are no events registered!";
             }
+
             return ConsoleUtilities.DrawTable<Event>(entities);
         }
     }

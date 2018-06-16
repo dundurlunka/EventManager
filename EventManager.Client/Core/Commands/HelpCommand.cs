@@ -11,6 +11,7 @@
         public override string Execute(string[] data)
         {
             StringBuilder sb = new StringBuilder();
+
             sb.AppendLine("Here you can find the needed information to operate with the program");
             sb.AppendLine("To create an event:");
             sb.AppendLine("- CreateEvent <name> <location> <startDate> <endDate>");
