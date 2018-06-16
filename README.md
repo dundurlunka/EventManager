@@ -22,6 +22,6 @@ the <strong>4 projects</strong>:
   
 Make sure you setup <strong>EventManager.Client</strong> as a <strong>StartUp project</strong> before starting the application.
 The connection string for the database is called <strong>EventManagerContext</strong> and is located in <strong>App.Config</strong> in <strong>EventManager.Client</strong> under the
-<strong>\<connectionStrings\> tag</strong>. In default, the database is initialized under <strong>(LocalDb)\MSSQLLocalDB</strong> server.
+<strong>\<connectionStrings\> tag</strong>. By default, the database is initialized under <strong>(LocalDb)\MSSQLLocalDB</strong> server.
 Build the <strong>StartUp project</strong> and run it. This will launch the console application. For more information about the commands
 of the program type <strong>Help</strong> in the console.
